@@ -1,5 +1,7 @@
 # all-about-vlsi
 ---
+<img width="500" height="500" alt=" Image Jul 16, 2025, 10_31_41 AM" src="https://github.com/user-attachments/assets/c336601f-6c87-417a-92d0-82d594351373" />
+
 ---
 
 ### 📏 **Moore’s Law**
