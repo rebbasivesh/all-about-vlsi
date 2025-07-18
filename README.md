@@ -94,3 +94,58 @@ NMOS, PMOS, CMOS
 | Use in Circuits   | Pull-down     | Pull-up       | Logic gates, ICs  |
 
 ---
+### 🔍 **Definition:**
+
+> **Threshold voltage (Vₜ)** is the **minimum gate voltage** at which a strong inversion layer forms at the interface between the oxide and the substrate in a MOSFET, allowing current to flow from **drain to source**.
+
+---
+
+### ⚙️ **Types of MOSFETs and Vₜ:**
+
+| Type     | Condition to Turn ON         | Vₜ Value (approx) |
+| -------- | ---------------------------- | ----------------- |
+| **NMOS** | $V_{GS} > V_{th}$            | \~0.2V to 0.7V    |
+| **PMOS** | $V_{GS} < V_{th}$ (negative) | \~ -0.2V to -0.7V |
+
+---
+
+### 📐 **Equation (Simplified for NMOS):**
+
+$$
+V_{th} = V_{FB} + 2\phi_F + \frac{\sqrt{2q\varepsilon_s N_A (2\phi_F)}}{C_{ox}}
+$$
+
+Where:
+
+* $V_{FB}$: Flat-band voltage
+* $\phi_F$: Fermi potential
+* $\varepsilon_s$: Permittivity of substrate
+* $N_A$: Doping concentration of p-type substrate
+* $C_{ox}$: Oxide capacitance per unit area
+
+---
+
+### 📊 **Importance in VLSI Design:**
+
+* **Speed vs Power tradeoff**:
+  Lower $V_{th}$ → Faster switching → Higher leakage power
+  Higher $V_{th}$ → Lower leakage → Slower operation
+
+* **Multi-Threshold CMOS (MTCMOS)** techniques are used to **balance power and performance**.
+
+* Affects:
+
+  * Static and dynamic power
+  * Leakage current
+  * Noise margin
+  * Short channel effects in modern submicron technologies
+
+---
+
+### 🧠 **Advanced Concepts:**
+
+* **Body effect**: Threshold voltage varies with source-bulk voltage.
+* **Short-channel effects** (SCEs): In deep submicron tech, $V_{th}$ decreases as channel length reduces.
+* **VT tuning**: Designers can tweak doping or use adaptive body biasing to optimize $V_{th}$.
+
+---
